@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout with Cricketer Images</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+       
+        header {
+            background-color:cadetblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+
+        main {
+            flex: 1; /* Allows main content to grow and take up available space */
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap into the next row if necessary */
+            justify-content: space-around; /* Distribute items with equal space */
+            align-items: center; /* Vertically center the items */
+            padding: 20px;
+            gap: 20px; /* Space between flex items */
+        }
+
+        /* Each Flexible Box (div) */
+        .flexbox-item {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            height: 250px;
+            flex: 1; /* Ensures the items grow */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Image Styling */
+        .flexbox-item img {
+            width: 100%; /* Make the image responsive */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design: For smaller screens, change layout to column */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+            }
+
+            .flexbox-item {
+                width: 100%; /* Take full width on small screens */
+                max-width: 350px; /* Ensure items don't become too large */
+                margin-bottom: 20px; /* Add space between items */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Responsive Flexbox Layout with sports Images</h1>
+    </header>
+
+    <!-- Main Content Section with Flexbox -->
+    <main>
+        <div class="flexbox-item">
+            <img src="./images/images (1).jpeg" alt="cricket">
+            <p>Cricket</p>
+        </div>
+        <div class="flexbox-item">
+            <img src="./images/download (1).jpeg" alt="Football">
+            <p>Football</p>
+        </div>
+        <div class="flexbox-item">
+            <img src="./images/download (4).jpeg" alt="Basketball">
+            <p>Basketball</p>
+        </div>
+        <div class="flexbox-item">
+            <img src="./images/images.jpeg" alt="Tennis">
+            <p>Tennis</p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
